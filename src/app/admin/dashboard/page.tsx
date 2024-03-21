@@ -1,12 +1,11 @@
 import Layout from "@/components/layout";
-import Card from "@/components/ui/card";
 
-export default function Home() {
+export default function Dashboard() {
   return (
     <div>
       <Layout title="Dashboard">
-        <Card />
+        s
       </Layout>
-   </div>
+    </div>
   );
 }

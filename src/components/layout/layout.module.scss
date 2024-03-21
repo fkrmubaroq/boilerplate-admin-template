@@ -1,0 +1,29 @@
+.layout{
+  display: grid;
+  grid-template-areas: "sidebar header"
+                       "sidebar content";
+  grid-template-columns: 264px calc(100% - 264px);
+  grid-template-rows: 64px 100vh;  
+  @apply transition-all duration-300;
+  &.layout--expand{
+    grid-template-columns: 80px calc(100% - 80px);
+  }
+  .sidebar{
+    grid-area: sidebar;
+    @apply border-r-[0.5px] bg-white shadow-md;
+    .sidebar__logo{
+      @apply flex gap-x-4 items-center mb-8 h-16 bg-slate-900 relative;
+      &:after {
+        @apply absolute content-[''] w-1 h-full -right-1 top-0 bottom-0 bg-slate-900 block;
+      }
+    }
+  }
+  .header{
+    grid-area: header;
+    @apply flex justify-between pl-2 pr-6 bg-slate-900 items-center gap-x-2.5 ;
+  }
+  .content{
+    grid-area: content;
+    @apply bg-gray-50 px-6 mt-5;
+  }
+}

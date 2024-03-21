@@ -35,4 +35,11 @@ type AppProps = {
   setState: React.Dispatch<React.SetStateAction<number>>;
 };
 
+export type PaginationType = {
+  current_page: number;
+  total_page: number;
+  total_all_rows: number;
+  start: number;
+  end: number;
+}
 export default AppProps;
